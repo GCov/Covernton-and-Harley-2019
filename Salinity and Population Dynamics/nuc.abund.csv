@@ -1,0 +1,177 @@
+year,date,salinity.regime,site,transect,live.tot,live.adults,live.juveniles,empty.tot,empty.adult,empty.juv,egg.mass,notes,num.tran
+2011,18-May-11,fresh,Tower South,a,128,,,,,,0,,4
+2011,18-May-11,fresh,Tower South,b,89,,,,,,0,,4
+2011,18-May-11,fresh,Tower South,c,83,,,,,,0,,4
+2011,18-May-11,fresh,Tower South,d,66,,,,,,0,,4
+2011,20-Apr-11,fresh,Tower North,a,21,,,0,,,0,,4
+2011,20-Apr-11,fresh,Tower North,b,15,,,0,,,0,,4
+2011,20-Apr-11,fresh,Tower North,c,36,,,0,,,0,,4
+2011,20-Apr-11,fresh,Tower North,d,13,,,0,,,0,,4
+2011,19-Apr-11,fresh,Dunbar,a,149,,,0,,,1,,4
+2011,19-Apr-11,fresh,Dunbar,b,43,,,0,,,0,,4
+2011,19-Apr-11,fresh,Dunbar,c,7,,,0,,,0,,4
+2011,19-Apr-11,fresh,Dunbar,d,56,,,0,,,1,,4
+2011,19-Apr-11,fresh,Waterloo,a,160,,,0,,,4,,4
+2011,19-Apr-11,fresh,Waterloo,b,209,,,0,,,2,,4
+2011,19-Apr-11,fresh,Waterloo,c,231,,,0,,,1,,4
+2011,19-Apr-11,fresh,Waterloo,d,235,,,0,,,2,,4
+2011,18-May-11,fresh,Kits Point,a,26,,,,,,0,,4
+2011,18-May-11,fresh,Kits Point,b,10,,,,,,0,,4
+2011,18-May-11,fresh,Kits Point,c,34,,,,,,0,,4
+2011,18-May-11,fresh,Kits Point,d,19,,,,,,1,,4
+2011,19-May-11,fresh,Point Atkinson,a,43,31,12,1,0,1,0,,4
+2011,19-May-11,fresh,Point Atkinson,b,15,11,4,2,0,2,0,,4
+2011,19-May-11,fresh,Point Atkinson,c,19,4,6,0,,,0,,4
+2011,19-May-11,fresh,Point Atkinson,d,31,,,5,,,0,,4
+2011,21-May-11,fresh,Weston Park,a,14,6,8,0,0,0,,"2 adults, 1 juvenile measured off transects",4
+2011,21-May-11,fresh,Weston Park,b,5,3,2,1,0,1,,,4
+2011,21-May-11,fresh,Weston Park,c,7,5,2,0,,,,,4
+2011,21-May-11,fresh,Weston Park,d,12,5,7,2,,,,,4
+2011,21-May-11,salty,Weston Spit,a,105,,,,,,,"31 adults, 19 juveniles measured off transects",2
+2011,21-May-11,salty,Weston Spit,b,54,,,,,,,,2
+2011,21-May-11,salty,Weston Spit,c,,,,,,,,,
+2011,21-May-11,salty,Weston Spit,d,,,,,,,,,
+2011,22-Apr-11,salty,Figurehead,a,9,,,0,,,,,4
+2011,22-Apr-11,salty,Figurehead,b,4,,,0,,,,,4
+2011,22-Apr-11,salty,Figurehead,c,9,,,0,,,,,4
+2011,22-Apr-11,salty,Figurehead,d,3,,,0,,,,,4
+2011,20-May-11,salty,White Rock,a,15,7,8,6,,,1,,4
+2011,20-May-11,salty,White Rock,b,11,11,0,1,,,0,,4
+2011,20-May-11,salty,White Rock,c,73,38,6,3,,,2,,4
+2011,20-May-11,salty,White Rock,d,31,,,10,,,0,,4
+2011,17-May-11,salty,Yellow Point,a,66,,,,,,2,,4
+2011,17-May-11,salty,Yellow Point,b,64,,,,,,4,,4
+2011,17-May-11,salty,Yellow Point,c,42,,,,,,1,,4
+2011,17-May-11,salty,Yellow Point,d,6,,,,,,1,,4
+2012,09-May-12,fresh,Tower South,a,102,92,10,16,8,8,4,,4
+2012,09-May-12,fresh,Tower South,b,116,115,1,22,19,3,0,,4
+2012,09-May-12,fresh,Tower South,c,34,34,0,5,5,0,0,,4
+2012,09-May-12,fresh,Tower South,d,10,10,0,3,2,1,0,,4
+2012,09-May-12,fresh,Tower North,a,0,0,0,1,1,0,0,,4
+2012,09-May-12,fresh,Tower North,b,0,0,0,0,0,0,0,,4
+2012,09-May-12,fresh,Tower North,c,0,0,0,0,0,0,0,,4
+2012,09-May-12,fresh,Tower North,d,0,0,0,0,0,0,0,,4
+2012,06-May-12,fresh,Dunbar,a,0,0,0,,,,,,4
+2012,06-May-12,fresh,Dunbar,b,0,0,0,,,,,,4
+2012,06-May-12,fresh,Dunbar,c,0,0,0,,,,,,4
+2012,06-May-12,fresh,Dunbar,d,0,0,0,,,,,,4
+2012,06-May-12,fresh,Waterloo,a,0,0,0,,,,,,4
+2012,06-May-12,fresh,Waterloo,b,0,0,0,,,,,,4
+2012,06-May-12,fresh,Waterloo,c,6,6,0,,,,,,4
+2012,06-May-12,fresh,Waterloo,d,2,2,0,,,,,,4
+2012,08-May-12,fresh,Kits Point,a,1,1,0,8,6,2,0,,4
+2012,08-May-12,fresh,Kits Point,b,0,0,0,2,2,0,0,,4
+2012,08-May-12,fresh,Kits Point,c,3,3,0,5,4,1,0,,4
+2012,08-May-12,fresh,Kits Point,d,2,2,0,9,5,4,0,,4
+2012,11-Apr-12,fresh,Point Atkinson,a,50,36,14,17,6,11,0,,4
+2012,11-Apr-12,fresh,Point Atkinson,b,12,9,3,24,10,14,0,,4
+2012,11-Apr-12,fresh,Point Atkinson,c,10,3,7,108,29,79,0,,4
+2012,11-Apr-12,fresh,Point Atkinson,d,0,0,0,117,15,102,0,,4
+2012,07-May-12,fresh,Weston Park,a,34,27,7,3,1,2,0,,4
+2012,07-May-12,fresh,Weston Park,b,23,17,6,0,0,0,0,,4
+2012,07-May-12,fresh,Weston Park,c,2,0,2,1,0,1,0,,4
+2012,07-May-12,fresh,Weston Park,d,2,2,0,1,0,1,0,,4
+2012,07-May-12,salty,Weston Spit,a,14,14,0,0,0,0,0,,2
+2012,07-May-12,salty,Weston Spit,b,30,29,1,1,1,0,0,,2
+2012,07-May-12,salty,Weston Spit,c,,,,,,,,,
+2012,07-May-12,salty,Weston Spit,d,,,,,,,,,
+2012,08-May-12,salty,Figurehead,a,17,16,1,0,0,0,0,,4
+2012,08-May-12,salty,Figurehead,b,18,17,1,0,0,0,0,,4
+2012,08-May-12,salty,Figurehead,c,19,18,1,0,0,0,0,,4
+2012,08-May-12,salty,Figurehead,d,7,6,1,0,0,0,0,,4
+2012,09-Apr-12,salty,White Rock,a,82,67,15,5,5,0,4,,4
+2012,09-Apr-12,salty,White Rock,b,51,42,9,3,2,1,2,,4
+2012,09-Apr-12,salty,White Rock,c,47,40,7,3,2,1,7,,4
+2012,09-Apr-12,salty,White Rock,d,42,37,5,20,17,3,0,,4
+2012,09-May-12,salty,Yellow Point,a,137,83,54,1,0,1,0,,4
+2012,09-May-12,salty,Yellow Point,b,93,65,28,1,0,1,3,,4
+2012,09-May-12,salty,Yellow Point,c,89,51,38,2,1,1,1,,4
+2012,09-May-12,salty,Yellow Point,d,138,83,55,0,0,0,0,,4
+2013,24-May-13,fresh,Tower South,a,77,77,0,19,19,0,0,,4
+2013,24-May-13,fresh,Tower South,b,59,59,0,5,5,0,0,,4
+2013,24-May-13,fresh,Tower South,c,26,26,0,19,18,1,0,,4
+2013,24-May-13,fresh,Tower South,d,26,26,0,19,18,1,0,,4
+2013,24-May-13,fresh,Tower North,a,0,0,0,0,0,0,0,,4
+2013,24-May-13,fresh,Tower North,b,0,0,0,1,1,0,0,,4
+2013,24-May-13,fresh,Tower North,c,0,0,0,1,1,0,0,,4
+2013,24-May-13,fresh,Tower North,d,0,0,0,0,0,0,0,,4
+2013,27-Apr-13,fresh,Dunbar,a,0,0,0,4,4,0,0,,4
+2013,27-Apr-13,fresh,Dunbar,b,0,0,0,4,4,0,0,,4
+2013,27-Apr-13,fresh,Dunbar,c,0,0,0,5,5,0,0,,4
+2013,27-Apr-13,fresh,Dunbar,d,0,0,0,5,5,0,0,,4
+2013,27-Apr-13,fresh,Waterloo,a,0,0,0,16,14,2,0,,4
+2013,27-Apr-13,fresh,Waterloo,b,0,0,0,30,28,2,0,,4
+2013,27-Apr-13,fresh,Waterloo,c,0,0,0,22,18,4,0,,4
+2013,27-Apr-13,fresh,Waterloo,d,0,0,0,25,23,2,0,,4
+2013,27-Apr-13,fresh,Kits Point,a,0,0,0,4,4,0,0,,4
+2013,27-Apr-13,fresh,Kits Point,b,0,0,0,1,1,0,0,,4
+2013,27-Apr-13,fresh,Kits Point,c,0,0,0,2,2,0,0,,4
+2013,27-Apr-13,fresh,Kits Point,d,0,0,0,5,5,0,0,,4
+2013,28-Apr-13,fresh,Point Atkinson,a,27,22,5,11,7,4,0,,4
+2013,28-Apr-13,fresh,Point Atkinson,b,8,8,0,87,43,44,0,,4
+2013,28-Apr-13,fresh,Point Atkinson,c,3,3,0,19,12,7,0,,4
+2013,28-Apr-13,fresh,Point Atkinson,d,0,0,0,1,0,1,0,,4
+2013,26-May-13,fresh,Weston Park,a,33,29,4,3,1,2,0,,4
+2013,26-May-13,fresh,Weston Park,b,36,36,0,4,4,0,0,,4
+2013,26-May-13,fresh,Weston Park,c,11,10,1,0,0,0,0,,4
+2013,26-May-13,fresh,Weston Park,d,34,34,0,0,0,0,0,,4
+2013,26-May-13,salty,Weston Spit,a,0,0,0,0,0,0,0,,4
+2013,26-May-13,salty,Weston Spit,b,0,0,0,3,2,1,0,,4
+2013,26-May-13,salty,Weston Spit,c,7,7,0,0,0,0,0,,4
+2013,26-May-13,salty,Weston Spit,d,34,34,0,0,0,0,1,,4
+2013,25-Apr-13,salty,Figurehead,a,13,13,0,0,0,0,0,,4
+2013,25-Apr-13,salty,Figurehead,b,16,16,0,0,0,0,0,,4
+2013,25-Apr-13,salty,Figurehead,c,17,14,3,0,0,0,0,,4
+2013,25-Apr-13,salty,Figurehead,d,10,9,1,0,0,0,0,,4
+2013,29-Apr-13,salty,White Rock,a,59,46,13,5,3,2,4,,4
+2013,29-Apr-13,salty,White Rock,b,50,43,7,17,5,12,4,,4
+2013,29-Apr-13,salty,White Rock,c,215,182,33,21,9,12,6,,4
+2013,29-Apr-13,salty,White Rock,d,144,123,21,59,48,11,5,,4
+2013,12-May-13,salty,Yellow Point,a,36,34,2,9,2,7,4,,4
+2013,12-May-13,salty,Yellow Point,b,74,73,1,5,3,2,5,,4
+2013,12-May-13,salty,Yellow Point,c,79,66,13,6,2,4,5,,4
+2013,12-May-13,salty,Yellow Point,d,138,122,16,4,0,4,1,,4
+2014,,fresh,Tower South,a,,,,,,,,,
+2014,,fresh,Tower South,b,,,,,,,,,
+2014,,fresh,Tower South,c,,,,,,,,,
+2014,,fresh,Tower South,d,,,,,,,,,
+2014,16-May-14,fresh,Tower North,a,0,0,0,0,0,0,0,,4
+2014,16-May-14,fresh,Tower North,b,0,0,0,0,0,0,0,,4
+2014,16-May-14,fresh,Tower North,c,0,0,0,0,0,0,0,,4
+2014,16-May-14,fresh,Tower North,d,0,0,0,0,0,0,0,,4
+2014,16-May-14,fresh,Dunbar,a,72,72,0,7,4,3,0,,3
+2014,16-May-14,fresh,Dunbar,b,15,15,0,4,1,3,0,,3
+2014,16-May-14,fresh,Dunbar,c,9,8,1,0,0,0,0,,3
+2014,16-May-14,fresh,Dunbar,d,,,,,,,0,,
+2014,16-May-14,fresh,Waterloo,a,7,6,1,21,8,13,0,,2
+2014,16-May-14,fresh,Waterloo,b,5,5,0,14,8,6,0,,2
+2014,16-May-14,fresh,Waterloo,c,,,,,,,,,
+2014,16-May-14,fresh,Waterloo,d,,,,,,,,,
+2014,16-May-14,fresh,Kits Point,a,7,7,0,8,3,5,0,,4
+2014,16-May-14,fresh,Kits Point,b,14,11,3,6,1,5,0,,4
+2014,16-May-14,fresh,Kits Point,c,0,0,0,4,2,2,0,,4
+2014,16-May-14,fresh,Kits Point,d,1,0,1,0,0,0,0,,4
+2014,17-May-14,fresh,Point Atkinson,a,26,25,1,14,8,6,0,,4
+2014,17-May-14,fresh,Point Atkinson,b,4,3,1,7,6,1,0,,4
+2014,17-May-14,fresh,Point Atkinson,c,80,74,6,25,10,15,0,,4
+2014,17-May-14,fresh,Point Atkinson,d,8,8,0,4,2,2,0,,4
+2014,17-May-14,fresh,Weston Park,a,19,19,0,4,1,3,0,,4
+2014,17-May-14,fresh,Weston Park,b,43,38,5,2,0,2,0,,4
+2014,17-May-14,fresh,Weston Park,c,4,3,1,3,0,3,0,,4
+2014,17-May-14,fresh,Weston Park,d,8,8,0,2,0,2,0,,4
+2014,17-May-14,salty,Weston Spit,a,69,64,5,1,1,0,3,,4
+2014,17-May-14,salty,Weston Spit,b,14,11,3,1,0,1,2,,4
+2014,17-May-14,salty,Weston Spit,c,37,8,29,0,0,0,0,,4
+2014,17-May-14,salty,Weston Spit,d,45,13,32,0,0,0,0,,4
+2014,18-Apr-14,salty,Figurehead,a,139,127,12,0,0,0,0,,4
+2014,18-Apr-14,salty,Figurehead,b,139,98,41,0,0,0,0,,4
+2014,18-Apr-14,salty,Figurehead,c,157,133,24,0,0,0,0,,4
+2014,18-Apr-14,salty,Figurehead,d,105,96,9,0,0,0,0,,4
+2014,15-May-14,salty,White Rock,a,2,1,1,13,6,7,0,,4
+2014,15-May-14,salty,White Rock,b,0,0,0,31,25,6,0,,4
+2014,15-May-14,salty,White Rock,c,18,7,11,11,6,5,0,,4
+2014,15-May-14,salty,White Rock,d,13,3,10,33,17,16,0,,4
+2014,14-May-14,salty,Yellow Point,a,25,25,0,1,1,0,5,,4
+2014,14-May-14,salty,Yellow Point,b,38,38,0,12,9,3,4,,4
+2014,14-May-14,salty,Yellow Point,c,37,37,0,0,0,0,6,,4
+2014,14-May-14,salty,Yellow Point,d,49,46,3,9,5,4,2,,4
