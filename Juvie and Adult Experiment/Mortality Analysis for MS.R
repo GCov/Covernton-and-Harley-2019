@@ -12,6 +12,7 @@ library(ggfortify)
 library(survminer)
 library(cowplot)
 library(MuMIn)
+library(plyr)
 
 npalette <- c('#D95A43', '#246378', '#FFC524', '#8C7C79')
 
@@ -59,164 +60,124 @@ fit8 <- survfit(Surv(death, status) ~ 1,
 fit9 <- survfit(Surv(death, status) ~ 1, 
                 data =  subset(snail1, tub == 'TS' & treat == 'Rescue'))
 
-A <- ggsurvplot(fit1, color = 'black', linetype = 'solid', 
-                size = 0.5, censor.size = 4,
-                conf.int = FALSE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
-  xlab('') +
-  ylab('') +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme_bw() +
+theme1 <-
   theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
+    text = element_text(size = 9),
+    axis.text = element_text(size = 8),
     strip.background = element_blank(),
     strip.text =  element_text(size = 8),
     panel.grid = element_blank(),
-    plot.margin = margin(c(0.5,0,0,0))
+    plot.margin = unit(c(0.3, 0.1, 0, 0), 'cm')
   )
+
+A <- ggsurvplot(fit1, color = 'black', linetype = 'solid', 
+                size = 0.5, censor.size = 4,
+                conf.int = FALSE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
+  xlab('') +
+  ylab('') +
+  theme_bw() +
+  theme1
 
 B <- ggsurvplot(fit2, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 8),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0.5,0,0,0))
-  )
+  theme1
 
 C <- ggsurvplot(fit3, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = FALSE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = FALSE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 8),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0.5,0,0,0))
-    )
+  theme1
 
 D <- ggsurvplot(fit4, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0, 22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('Proportion Alive') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 8),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 7),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0,0,0,0))
-    )
+  theme1
 
 E <- ggsurvplot(fit5, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 8),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0,0,0,0))
-    )
+  theme1
 
 G <- ggsurvplot(fit6, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 8),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0,0,0,0))
-    )
+  theme1
 
 H <- ggsurvplot(fit7, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 8),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0,0,0,0))
-    )
+  theme1
 
 I <- ggsurvplot(fit8, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('Day') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 8),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 7),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0,0,0,0))
-    )
+  theme1
 
 J <- ggsurvplot(fit9, color = 'black', linetype = 'solid', 
                 size = 0.5, censor.size = 4,
-                conf.int = TRUE, conf.int.fill = npalette[1],
-                xlim = c(0,22))$plot +
+                conf.int = TRUE, 
+                conf.int.fill = npalette[1],
+                xlim = c(0,21),
+                break.x.by = 7)$plot +
   xlab('') +
   ylab('') +
   theme_bw() +
-  scale_x_continuous(limits = c(0,22), breaks = c(0, 7, 14, 21)) +
-  theme(
-    text = element_text(size = 10),
-    axis.text = element_text(size = 6),
-    strip.background = element_blank(),
-    strip.text =  element_text(size = 8),
-    panel.grid = element_blank(),
-    plot.margin = margin(c(0,0,0,0))
-    )
+  theme1
 
-xoff <- 0.1 # relative x position of label, within one plot
-yoff <- 1 # relative y position of label, within one plot
-labels <- c('WRJ High', 'WRA High', 'TS High',
-            'WRJ Low', 'WRA Low', 'TS Low',
-            'WRJ Variable', 'WRA Variable', 'TS Variable')
+labels <- c('20 psu White Rock Juveniles', 
+            '20 psu White Rock Adults', 
+            '20 psu Tower South Adults',
+            '9 psu White Rock Juveniles', 
+            '9 psu White Rock Adults', 
+            '9 psu Tower South Adults',
+            'Variable White Rock Juveniles', 
+            'Variable White Rock Adults', 
+            'Variable Tower South Adults')
 
 surv_plot <-
   plot_grid(
@@ -229,17 +190,16 @@ surv_plot <-
     H,
     I,
     J,
-      align = 'hv',
+    align = 'hv',
     ncol = 3,
     nrow = 3,
     labels = labels,
-    label_size = 7,
+    label_size = 8,
     hjust = 0,
     label_x = 0.22,
-    label_y = 0.52,
+    label_y = 1.045,
     label_fontface = 'plain'
-  ) + 
-  theme(plot.margin = margin(c(0.5,0,0,0)))
+  )
 
 surv_plot
 
