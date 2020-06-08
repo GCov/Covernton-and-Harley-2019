@@ -20,7 +20,7 @@ head(salinity$Date)
 
 salinity$Site <- as.factor(salinity$Site)
 salinity$sal_reg <- as.factor(salinity$salinity.regime)
-salinity$sal.dat <- as.Date(salinity$Date)
+salinity$sal.dat <- as.Date(salinity$Date, '%Y-%m-%d')
 head(salinity$sal.dat)
 
 salinity$Site <-
@@ -72,7 +72,7 @@ summary(salinity)
 summary(FRoutflow)
 head(FRoutflow)
 
-FRoutflow$Date <- as.Date(FRoutflow$Date)
+FRoutflow$Date <- as.Date(FRoutflow$Date, '%Y-%m-%d')
 
 FRoutflow2 <-
   subset(FRoutflow, PARAM == 1)  # only want outflow data
@@ -302,26 +302,9 @@ plot_grid(FRplot,
 
 dev.off()
 
-## Plot Fraser outflow
-
-png(
-  filename = "Fraser Outflow.png",
-  width = 11.43,
-  height = 9,
-  units = "cm",
-  pointsize = 10,
-  res = 600
-)
-
-
-
-dev.off()
-
 ## Now feed the model historical Fraser River outflow data
 
 head(FRoutflow)
-
-FRoutflow$Date <- as.Date(FRoutflow$Date)
 
 FRoutflow86to16 <- subset(FRoutflow,
                           PARAM == 1 &
@@ -728,8 +711,8 @@ under15plot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = predict(mod1) - predict(mod1, se.fit = TRUE)$se.fit,
-      ymax = predict(mod1) + predict(mod1, se.fit = TRUE)$se.fit
+      ymin = predict(mod1) - 1.96*predict(mod1, se.fit = TRUE)$se.fit,
+      ymax = predict(mod1) + 1.96*predict(mod1, se.fit = TRUE)$se.fit
     ),
     fill = npalette[1],
     size = 0.5,
@@ -742,9 +725,9 @@ under15plot <-
   ylab('Days Under 15 psu') +
   FRtheme
 
-mod2 <- glm(under9 ~ Year, data = TSsal, family = 'poisson')
+mod2 <- lm(under9 ~ Year, data = TSsal)
 plot(mod2)  # seems decent
-summary(mod2)  # p < 0.001
+summary(mod2)  # p = 0.37
 
 under9plot <- 
   ggplot(TSsal) +
@@ -754,21 +737,20 @@ under9plot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = exp(predict(mod2) - predict(mod2, se.fit = TRUE)$se.fit),
-      ymax = exp(predict(mod2) + predict(mod2, se.fit = TRUE)$se.fit)
+      ymin = predict(mod2) - 1.96*predict(mod2, se.fit = TRUE)$se.fit,
+      ymax = predict(mod2) + 1.96*predict(mod2, se.fit = TRUE)$se.fit
     ),
     fill = npalette[1],
     size = 0.5,
     alpha = 0.5
   ) +
   geom_line(aes(x = Year,
-                y = exp(predict(mod2))),
+                y = predict(mod2)),
             linetype = 'dashed', size = 0.5) +
   xlab('Year') +
   ylab('Days Under 9 psu') +
   theme_classic() + 
-  FRtheme +
-  annotate('text', x = 1987, y = 65, label = '*', size = 10)
+  FRtheme
 
 mod3 <- lm(log(min.sal) ~ Year, data = TSsal)
 plot(mod3)  # seems decent
@@ -782,8 +764,8 @@ minsalplot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = exp(predict(mod3) - predict(mod3, se.fit = TRUE)$se.fit),
-      ymax = exp(predict(mod3) + predict(mod3, se.fit = TRUE)$se.fit)
+      ymin = exp(predict(mod3) - 1.96*predict(mod3, se.fit = TRUE)$se.fit),
+      ymax = exp(predict(mod3) + 1.96*predict(mod3, se.fit = TRUE)$se.fit)
     ),
     fill = npalette[1],
     size = 0.5,
@@ -809,8 +791,8 @@ meansalplot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = predict(mod4) - predict(mod4, se.fit = TRUE)$se.fit,
-      ymax = predict(mod4) + predict(mod4, se.fit = TRUE)$se.fit
+      ymin = predict(mod4) - 1.96*predict(mod4, se.fit = TRUE)$se.fit,
+      ymax = predict(mod4) + 1.96*predict(mod4, se.fit = TRUE)$se.fit
     ),
     fill = npalette[1],
     size = 0.5,
@@ -836,8 +818,8 @@ mindateplot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = predict(mod5) - predict(mod5, se.fit = TRUE)$se.fit,
-      ymax = predict(mod5) + predict(mod5, se.fit = TRUE)$se.fit
+      ymin = predict(mod5) - 1.96*predict(mod5, se.fit = TRUE)$se.fit,
+      ymax = predict(mod5) + 1.96*predict(mod5, se.fit = TRUE)$se.fit
     ),
     fill = npalette[1],
     size = 0.5,
@@ -863,8 +845,8 @@ stressplot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = predict(mod6) - predict(mod6, se.fit = TRUE)$se.fit,
-      ymax = predict(mod6) + predict(mod6, se.fit = TRUE)$se.fit
+      ymin = predict(mod6) - 1.96*predict(mod6, se.fit = TRUE)$se.fit,
+      ymax = predict(mod6) + 1.96*predict(mod6, se.fit = TRUE)$se.fit
     ),
     fill = npalette[1],
     size = 0.5,
@@ -890,8 +872,8 @@ varianceplot <-
   geom_ribbon(
     aes(
       x = Year,
-      ymin = predict(mod7) - predict(mod7, se.fit = TRUE)$se.fit,
-      ymax = predict(mod7) + predict(mod7, se.fit = TRUE)$se.fit
+      ymin = predict(mod7) - 1.96*predict(mod7, se.fit = TRUE)$se.fit,
+      ymax = predict(mod7) + 1.96*predict(mod7, se.fit = TRUE)$se.fit
     ),
     fill = npalette[1],
     size = 0.5,
@@ -1599,11 +1581,11 @@ simulateResiduals(
 ## Plot model predictions
 
 pop_mod2$min.pred <- (predict(m7, type = 'response') - 
-                        predict(m7, type = 'response',
+                        1.96 * predict(m7, type = 'response',
                                 se.fit = TRUE)$se.fit)
 
 pop_mod2$max.pred <- (predict(m7, type = 'response') + 
-                        predict(m7, type = 'response',
+                        1.96 * predict(m7, type = 'response',
                                 se.fit = TRUE)$se.fit)
 
 pop_mod2$pred <- predict(m7, type = 'response')
@@ -1847,9 +1829,9 @@ juvmodplot <-
     aes(
       x = stressnew,
       ymin = predict(model5, type = 'response') -
-        predict(model5, type = 'response', se.fit = TRUE)$se.fit,
+        1.96 * predict(model5, type = 'response', se.fit = TRUE)$se.fit,
       ymax = predict(model5, type = 'response') +
-        predict(model5, type = 'response', se.fit = TRUE)$se.fit
+        1.96 * predict(model5, type = 'response', se.fit = TRUE)$se.fit
     ),
     size = 0.5,
     alpha = 0.5,
@@ -2009,8 +1991,8 @@ head(simdead2)
 sedead2 <- as.data.frame(do.call(cbind, sedead))
 head(sedead2)
 
-deadmin <- simdead2 - sedead2
-deadmax <- simdead2 + sedead2
+deadmin <- simdead2 - 1.96*sedead2
+deadmax <- simdead2 + 1.96*sedead2
 
 deadmodplot <- ggplot(pop_mod4,
                       aes(x = stressnew, y = prop.dead)) +
